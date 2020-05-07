@@ -64,6 +64,16 @@ const ContactForm = () => {
             ref={register({ required: false })}
           />
         </div>
+        <div>
+          <label htmlFor='role'>Role:</label>
+          <select id='role' name='role' ref={register({ required: true })}>
+          <option value=''></option>
+            <option value='Front-End Developer'>Front-End Developer</option>
+            <option value='Back-End Developer'>Back-End Developer</option>
+            <option value='Designer'>Designer</option>
+            <option value='Data Scientist'>Data Scientist</option>
+          </select>
+        </div>
         {data && (
           <pre style={{ textAlign: "left", color: "white" }}>
             {JSON.stringify(data, null, 2)}
